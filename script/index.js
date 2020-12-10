@@ -17,5 +17,20 @@ var knappElement = document.getElementById("KnappTaket");
 var bildeElement = document.getElementById("houseImg");
 
 knappElement.addEventListener("click", function(){
-    bildeElement.src="./pictures/House2.jpg";
+var isreverse = false
+var classList1 = knappElement.classList
+console.log(classList1)
+// Brukerens perspektiv:
+// Taket kommer på igjen, ved å klikke en gang til
+
+//Scriptet gjør følgende hvis element har klasse reverse1
+
+
+if(classList1.contains ("reverse1")) {
+    classList1.remove("reverse1");
+    knappElement.textContent = bildeElement;
+} else {
+    classList1.add("reverse1");
+    
+}
 });
